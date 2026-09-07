@@ -15,9 +15,8 @@ from routers.dashboard import router as dashboard_router
 from routers.bookings import router as bookings_router
 from routers.auth import router as auth_router
 from routers.properties import router as properties_router
+
 from fastapi.middleware.cors import CORSMiddleware
-
-
 app = FastAPI(
     title="Real Estate CRM API",
     version="1.0.0"
@@ -28,6 +27,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "https://real-estate-crm-frontend-km0d.onrender.com",
     ],
     allow_credentials=True,
     allow_methods=["*"],
